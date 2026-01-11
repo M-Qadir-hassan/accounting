@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Profit Doesn't Always Equal Cash - GoodBooqs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="./assets/FAVICON-LG.svg" sizes="32x32">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* --- ARTICLE SPECIFIC CSS --- */
+
+        /* Reading Typography */
+        .article-body {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+
+        .article-body h2 {
+            font-weight: 700;
+            color: #231f20;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body h3 {
+            font-weight: 600;
+            color: #231f20;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Custom Blockquote */
+        .article-blockquote {
+            border-left: 4px solid #8DC63F;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+            font-size: 1.25rem;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Dropcap for first letter */
+        .dropcap::first-letter {
+            font-size: 3.5rem;
+            font-weight: 800;
+            float: left;
+            line-height: 0.8;
+            margin-right: 10px;
+            color: #8DC63F;
+        }
+
+        /* Author Avatar in Header */
+        .author-meta img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Sticky Sidebar */
+        .sidebar-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 100px;
+            /* Adjust based on navbar height */
+        }
+
+        /* Table of Contents Links */
+        .toc-link {
+            display: block;
+            color: #6c757d;
+            text-decoration: none;
+            padding: 5px 0;
+            font-size: 0.95rem;
+            border-left: 2px solid transparent;
+            padding-left: 15px;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover {
+            color: #8DC63F;
+            border-left-color: #8DC63F;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header style="min-height: auto;">
+        <nav class="navbar navbar-expand-lg navbar-light pt-4">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="220 360 400 100" height="40" xml:space="preserve">
+                        <path
+                            d="M269.6 431.61h-3.55c-.27-.65-.42-2.77-.49-6.51-1.72 3.05-5.3 7.06-13.88 7.06-12.58 0-19.14-9.57-19.14-22 0-13.07 7.01-22.9 20-22.9 9.76 0 16.08 5.19 17.4 13.14h-4.47c-1.7-5.6-5.65-9.25-13.05-9.25-10.58 0-15.14 8.32-15.14 18.78 0 9.55 4.47 18.32 14.79 18.32 10.42 0 13.2-6.85 13.2-15.5v-.48h-13.31v-3.96h17.64zm35.82-15.82c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.26.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.61 0-9.87 5.43-9.87 12.83m57.97-.06c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.6 0-9.87 5.43-9.87 12.83m56.93-30.33v37.09c0 3 0 5.9.06 9h-4.03c-.14-.79-.22-3.51-.23-4.92-1.57 3.59-4.94 5.67-10.28 5.67-8.16 0-13.1-6.63-13.1-16.16 0-9.71 5.37-16.87 14.01-16.87 5.97 0 8.48 2.5 9.38 4.41v-18.22zm-23.19 30.54c0 8.17 4.09 12.59 9.29 12.59 7.89 0 9.86-5.6 9.86-13.42 0-7.62-1.73-12.18-9.36-12.18-5.92 0-9.79 4.72-9.79 13.01m34.04-28.18h15.94c8.77 0 13.18 4.63 13.18 10.83 0 5.14-3.03 8.48-6.54 9.55 3.09.92 8.04 3.99 8.04 10.66 0 8.52-6.44 12.71-14.36 12.71h-16.26zm14.82 18.53c7.01 0 9.7-2.67 9.7-7.37 0-4.11-2.9-7.28-8.57-7.28h-11.56v14.65zm-10.44 21.33h11.63c5.63 0 10-2.74 10-8.73 0-5.19-3.33-8.72-11.49-8.72h-10.13v17.45zm60.69-11.95c0 8.91-5.01 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.9-5.23 9.9-12.82 0-7.28-3.53-12.84-10.03-12.84-6.6 0-9.86 5.43-9.86 12.83m57.98-.06c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.54 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.61 0-9.87 5.43-9.87 12.83m52.78 10.78c-1.56 3.46-4.5 5.74-10.41 5.74-7.21 0-13.04-5.85-13.04-16.15 0-10.77 6.37-16.88 13.84-16.88 6.17 0 8.86 2.94 9.61 5.15-.04-1.28.08-2.92.16-4.4h4c-.05 3.52-.06 5.85-.06 8.74v35.3h-4.1zm-19.05-10.62c0 6.64 3.05 12.64 9.55 12.64 7.36 0 9.63-4.98 9.63-12.96 0-7.91-1.97-12.58-9.4-12.58-6.36 0-9.78 5.39-9.78 12.9"
+                            style="fill:#231f20" />
+                        <path
+                            d="M526.91 419.84c1.36 5.14 5.54 7.68 11.57 7.68 5.97 0 9.59-2.42 9.59-6.83 0-3.66-1.6-6.21-11.01-8.14-11.33-2.3-14.82-5.97-14.82-12.24 0-5.63 4.48-11.55 15.07-11.55 11.26 0 15.45 5.89 16.06 11.14h-6.04c-.82-3.52-3.57-6.34-10.41-6.34-6.72 0-8.6 3.22-8.6 6.17 0 3.64 2.31 5.48 10.69 7.11 12.79 2.5 15.36 7.53 15.36 13.08 0 7.25-5.79 12.43-16.39 12.43-9.55 0-15.8-4.6-17.21-12.53h6.14zm9.06 18.3v-54.09h4.14v54.09z"
+                            style="fill:#8dc63f" />
+                    </svg>
+                </a>
+
+                <div class="d-flex align-items-center">
+                    <a href="blog.html" class="text-decoration-none text-muted fw-bold small"><i
+                            class="bi bi-arrow-left me-1"></i> Back to Blog</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class=" pb-4">
+        <div class="container" data-aos="fade-up">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-3">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none text-muted">Blog</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Cash Flow</li>
+                </ol>
+            </nav>
+
+<div class="row align-items-start">
+    
+    <div class="col-lg-10">
+        <h1 class="display-4 fw-bold text-brand-dark mb-4">
+            Why Profit Doesn't Always Equal Cash: The Founder's Trap
+        </h1>
+    </div>
+
+    <div class="col-lg-2 text-lg-end">
+        <span class=" bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mt-2">
+            Cash Flow
+        </span>
+    </div>
+
+</div>
+
+            <div class="d-flex align-items-center author-meta mt-4  ">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="shadow-sm me-3">
+                <div>
+                    <p class="mb-0 fw-bold text-dark">Michael Torres</p>
+                    <p class="mb-0 text-muted small">CFO & Co-Founder · Oct 20, 2024 · 5 min read</p>
+                </div>
+                <div class="ms-auto d-none d-md-flex gap-3">
+                    <a href="#" class="text-muted fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-muted fs-5"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-muted fs-5"><i class="bi bi-link-45deg"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://www.bankrate.com/brp/2025/07/17112626/Deposits-how-much-cash-should-you-keep-at-home.jpg?auto=webp&optimize=high&crop=16:9"
+                class="w-100 rounded-4 shadow-sm" style="max-height: 550px; object-fit: cover;"
+                alt="Hands counting money">
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-8">
+                    <article class="article-body">
+                        <p class="dropcap">
+                            It is the scenario every new business owner dreads. You look at your P&L statement at the
+                            end of the month, and it shows a healthy net profit. You high-five your co-founder. But
+                            then, you go to pay the bills, and the bank account is empty.
+                        </p>
+                        <p>
+                            How is this possible? If I made money, where is it?
+                        </p>
+                        <p>
+                            This is the fundamental difference between <strong>Profit</strong> and <strong>Cash
+                                Flow</strong>. Profit is an accounting theory; Cash is a reality. Understanding the gap
+                            between the two is often the difference between a business that scales and one that stalls.
+                        </p>
+
+                        <h2 id="the-difference">The Core Difference</h2>
+                        <p>
+                            In accrual accounting (which most businesses should use), revenue is recognized when it is
+                            *earned*, not when the cash hits the bank.
+                        </p>
+                        <ul>
+                            <li><strong>Profit:</strong> Revenue minus Expenses (includes invoices sent but not paid).
+                            </li>
+                            <li><strong>Cash Flow:</strong> Money in minus Money out.</li>
+                        </ul>
+                        <p>
+                            If you send a $10,000 invoice today with "Net 60" terms, your P&L says you made $10,000 this
+                            month. But your bank account won't see that money for two months. In the meantime, you still
+                            have to pay rent and payroll.
+                        </p>
+
+                        <blockquote class="article-blockquote">
+                            "Revenue is vanity, profit is sanity, but cash is king."
+                        </blockquote>
+
+                        <h2 id="where-cash-goes">Where Did The Cash Go?</h2>
+                        <p>
+                            If you are profitable but broke, your cash is likely hiding in one of these three places:
+                        </p>
+
+                        <h3>1. Accounts Receivable</h3>
+                        <p>
+                            This is the most common culprit. If your customers pay you slowly, you are essentially
+                            acting as a bank, lending them money at 0% interest.
+                        </p>
+
+                        <h3>2. Inventory</h3>
+                        <p>
+                            Inventory is cash sitting on a shelf. It doesn't show up as an expense on the P&L until you
+                            actually sell the item (Cost of Goods Sold). But the cash left your bank account the moment
+                            you bought the stock.
+                        </p>
+
+                        <h3>3. Debt Payments</h3>
+                        <p>
+                            The principal portion of a loan payment does not appear on your P&L (only the interest
+                            does). So if you are paying down a large business loan, you are draining cash without
+                            lowering your "profit."
+                        </p>
+
+                        <h2 id="how-to-fix">How to Fix It</h2>
+                        <p>
+                            To align your profit with your cash, you need to tighten your cash conversion cycle.
+                        </p>
+                        <p>
+                            Start by shortening payment terms for clients (move from Net 30 to Due on Receipt).
+                            Secondly, negotiate longer payment terms with your own vendors. If you can collect money in
+                            10 days and pay bills in 30 days, your cash flow will naturally turn positive.
+                        </p>
+                        <p>
+                            Finally, stop looking at your P&L in isolation. Always review your <strong>Statement of Cash
+                                Flows</strong> alongside it. That report tells the true story of your business's health.
+                        </p>
+                    </article>
+
+                    <div class="mt-5 border-top pt-4">
+                        <span class="fw-bold me-2 text-muted small text-uppercase">Tags:</span>
+                        <a href="#" class="btn btn-light btn-sm rounded-pill me-1 mb-1">Accounting</a>
+                        <a href="#" class="btn btn-light btn-sm rounded-pill me-1 mb-1">Startups</a>
+                        <a href="#" class="btn btn-light btn-sm rounded-pill me-1 mb-1">Cash Flow</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar-sticky">
+
+                        <div class="p-4 bg-light rounded-4 mb-4">
+                            <h6 class="fw-bold mb-3 text-uppercase small ls-1 text-muted">Table of Contents</h6>
+                            <nav class="nav flex-column">
+                                <a class="toc-link mb-2" href="#the-difference">The Core Difference</a>
+                                <a class="toc-link mb-2" href="#where-cash-goes">Where Did The Cash Go?</a>
+                                <a class="toc-link" href="#how-to-fix">How to Fix It</a>
+                            </nav>
+                        </div>
+
+                        <div class="p-4 bg-white border rounded-4 shadow-sm text-center">
+                            <h5 class="fw-bold mb-2">Confused by your numbers?</h5>
+                            <p class="text-muted small mb-4">We help founders translate their P&L into actionable growth
+                                strategies.</p>
+                            <a href="contact.html" class="btn btn-success w-100 fw-bold">Book a Consultation</a>
+                        </div>
+
+                        <div class="mt-5">
+                            <h6 class="fw-bold mb-3">Related Articles</h6>
+
+                            <div class="d-flex mb-3 align-items-center">
+                                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2064&auto=format&fit=crop"
+                                    class="rounded-3 me-3" width="70" height="70" style="object-fit:cover;" alt="thumb">
+                                <div>
+                                    <h6 class="mb-1"><a href="#" class="text-decoration-none text-dark fw-bold"
+                                            style="font-size: 0.95rem;">5 KPIs Every SaaS Founder Should Track</a></h6>
+                                    <small class="text-muted">Oct 15 · 6 min read</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-3 align-items-center">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop"
+                                    class="rounded-3 me-3" width="70" height="70" style="object-fit:cover;" alt="thumb">
+                                <div>
+                                    <h6 class="mb-1"><a href="#" class="text-decoration-none text-dark fw-bold"
+                                            style="font-size: 0.95rem;">Stop Using Excel for Your Bookkeeping</a></h6>
+                                    <small class="text-muted">Oct 10 · 4 min read</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container mb-5 t">
+        <section class="newsletter-wrapper text-center" data-aos="zoom-in" data-aos-duration="800">
+
+            <div class="position-absolute top-0 end-0 p-5 opacity-25 d-none d-md-block">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="2" stroke-dasharray="10 10"
+                        opacity="0.3" />
+                </svg>
+            </div>
+
+            <div class="position-relative z-1">
+
+                <div class="avatar-stack">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+                </div>
+
+                <h2 class="fw-bold mb-3 display-6 text-success">Get smarter about your money.</h2>
+                <p class=" mb-5 mx-auto fs-5" style="max-width: 550px;">
+                    Join <strong class="text-success">2,000+ business owners</strong> receiving our weekly financial
+                    tips, tax updates, and
+                    growth strategies.
+                </p>
+
+                <form class="mx-auto" style="max-width: 500px;">
+                    <div class="input-group-pill d-flex">
+                        <input type="email" class="form-control" placeholder="Enter your email address"
+                            aria-label="Enter your email">
+                        <button class="btn btn-success fw-bold text-white shadow-sm" type="button">Subscribe</button>
+                    </div>
+                    <div class="mt-3">
+                        <small class="" style="font-size: 0.75rem;">
+                            <i class="bi bi-lock-fill me-1"></i> No spam. <span class="text-success">Unsubscribe
+                                anytime.</span>
+                        </small>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">© 2024 GoodBooqs LLC.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="legal-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+    </script>
+</body>
+
+</html>

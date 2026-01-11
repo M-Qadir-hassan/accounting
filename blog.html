@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodBooqs - Blog & Insights</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="./assets/FAVICON-LG.svg" sizes="32x32">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="position-relative d-flex flex-column" style="min-height: 95vh;">
+        <img class="position-absolute top-0 start-0 w-100 h-100 z-n1" style="object-fit: cover; opacity: 0.6;"
+            src="./assets/headers/bg-waves.png" alt="" />
+
+        <nav class="navbar navbar-expand-lg navbar-light py-5 py-md-3" data-aos="fade-down" data-aos-duration="1000">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="220 360 400 100" height="50" xml:space="preserve"
+                        class="logo">
+                        <path
+                            d="M269.6 431.61h-3.55c-.27-.65-.42-2.77-.49-6.51-1.72 3.05-5.3 7.06-13.88 7.06-12.58 0-19.14-9.57-19.14-22 0-13.07 7.01-22.9 20-22.9 9.76 0 16.08 5.19 17.4 13.14h-4.47c-1.7-5.6-5.65-9.25-13.05-9.25-10.58 0-15.14 8.32-15.14 18.78 0 9.55 4.47 18.32 14.79 18.32 10.42 0 13.2-6.85 13.2-15.5v-.48h-13.31v-3.96h17.64zm35.82-15.82c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.26.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.61 0-9.87 5.43-9.87 12.83m57.97-.06c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.6 0-9.87 5.43-9.87 12.83m56.93-30.33v37.09c0 3 0 5.9.06 9h-4.03c-.14-.79-.22-3.51-.23-4.92-1.57 3.59-4.94 5.67-10.28 5.67-8.16 0-13.1-6.63-13.1-16.16 0-9.71 5.37-16.87 14.01-16.87 5.97 0 8.48 2.5 9.38 4.41v-18.22zm-23.19 30.54c0 8.17 4.09 12.59 9.29 12.59 7.89 0 9.86-5.6 9.86-13.42 0-7.62-1.73-12.18-9.36-12.18-5.92 0-9.79 4.72-9.79 13.01m34.04-28.18h15.94c8.77 0 13.18 4.63 13.18 10.83 0 5.14-3.03 8.48-6.54 9.55 3.09.92 8.04 3.99 8.04 10.66 0 8.52-6.44 12.71-14.36 12.71h-16.26zm14.82 18.53c7.01 0 9.7-2.67 9.7-7.37 0-4.11-2.9-7.28-8.57-7.28h-11.56v14.65zm-10.44 21.33h11.63c5.63 0 10-2.74 10-8.73 0-5.19-3.33-8.72-11.49-8.72h-10.13v17.45zm60.69-11.95c0 8.91-5.01 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.9-5.23 9.9-12.82 0-7.28-3.53-12.84-10.03-12.84-6.6 0-9.86 5.43-9.86 12.83m57.98-.06c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.54 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.61 0-9.87 5.43-9.87 12.83m52.78 10.78c-1.56 3.46-4.5 5.74-10.41 5.74-7.21 0-13.04-5.85-13.04-16.15 0-10.77 6.37-16.88 13.84-16.88 6.17 0 8.86 2.94 9.61 5.15-.04-1.28.08-2.92.16-4.4h4c-.05 3.52-.06 5.85-.06 8.74v35.3h-4.1zm-19.05-10.62c0 6.64 3.05 12.64 9.55 12.64 7.36 0 9.63-4.98 9.63-12.96 0-7.91-1.97-12.58-9.4-12.58-6.36 0-9.78 5.39-9.78 12.9"
+                            style="fill:#231f20" />
+                        <path
+                            d="M526.91 419.84c1.36 5.14 5.54 7.68 11.57 7.68 5.97 0 9.59-2.42 9.59-6.83 0-3.66-1.6-6.21-11.01-8.14-11.33-2.3-14.82-5.97-14.82-12.24 0-5.63 4.48-11.55 15.07-11.55 11.26 0 15.45 5.89 16.06 11.14h-6.04c-.82-3.52-3.57-6.34-10.41-6.34-6.72 0-8.6 3.22-8.6 6.17 0 3.64 2.31 5.48 10.69 7.11 12.79 2.5 15.36 7.53 15.36 13.08 0 7.25-5.79 12.43-16.39 12.43-9.55 0-15.8-4.6-17.21-12.53h6.14zm9.06 18.3v-54.09h4.14v54.09z"
+                            style="fill:#8dc63f" />
+                    </svg>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-nav-centered">
+                        <li class="nav-item me-4"><a class="nav-link text-dark fw-medium" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-4"><a class="nav-link text-dark fw-medium " href="about.html">About
+                                us</a></li>
+                        <li class="nav-item me-4"><a class="nav-link text-dark fw-medium "
+                                href="index.html#PricingSection">Pricing</a></li>
+                        <li class="nav-item me-4"><a class="nav-link text-dark fw-medium" href="contact.html">Contact
+                                us</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium active" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-lg-block ms-auto">
+                        <a class="btn-custom-dark d-inline-flex align-items-center" href="contact.html">
+                            <span class="me-2 z-1">Get in touch</span>
+                            <span class="arrow-icon z-1">
+                                <svg width="20" height="20" viewbox="0 0 20 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.75 10H15.25" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10 4.75L15.25 10L10 15.25" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        </section>
+        <section class=" text-center about-hero flex-grow-1 d-flex align-items-center">
+            <div class="container" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase ls-1 small">Insights & Resources</span>
+                <h1 class="display-3 fw-bold text-brand-dark mb-3">Financial Wisdom.</h1>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                    Practical advice, industry news, and guides to help you master your business finances.
+                </p>
+            </div>
+        </section>
+    </header>
+
+    <section class="py-5 ">
+        <div class="container">
+            <div class="featured-card shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2026&auto=format&fit=crop"
+                            class="featured-img w-100" alt="Featured Post">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <span class="text-success fw-bold text-uppercase small mb-2 d-block">Editors Pick</span>
+                            <h2 class="display-6 fw-bold mb-3"><a href="#"
+                                    class="text-decoration-none text-brand-dark">The Ultimate Guide to Preparing for Tax
+                                    Season</a></h2>
+                            <p class="text-muted mb-4 lead fs-6">
+                                Don't let April 15th catch you by surprise. Here is our comprehensive checklist to
+                                ensure your books are squeaky clean and your deductions are maximized.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3"
+                                    width="40" alt="Author">
+                                <div>
+                                    <p class="mb-0 fw-bold small">Sarah Jenkins</p>
+                                    <p class="mb-0 text-muted small">Oct 24, 2024 · 5 min read</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <h3 class="fw-bold m-0">Latest Articles</h3>
+                <a href="#" class="text-success text-decoration-none fw-bold small">View All <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <span class="badge-category">Cash Flow</span>
+                            <img src="https://www.kaltura.com/p/1423662/sp/142366200/thumbnail/entry_id/1_6pkicv99/width/650/height"
+                                alt="Cash Flow vs Profit">
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta">Oct 20, 2024 · 3 min read</div>
+                            <h5 class="card-title fw-bold mb-3">
+                                <a href="./article.html">Why Profit Doesn't Always Equal Cash</a>
+                            </h5>
+                            <p class="text-muted small mb-0 flex-grow-1">
+                                Understanding the difference between your P&L and your bank balance is crucial for
+                                survival.
+                            </p>
+                            <a href="./article.html" class="btn-link text-success text-decoration-none mt-3 fw-bold small">Read
+                                Article <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <span class="badge-category">Growth</span>
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2064&auto=format&fit=crop"
+                                alt="Post 2">
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta">Oct 15, 2024 · 6 min read</div>
+                            <h5 class="card-title fw-bold mb-3">
+                                <a href="#">5 KPIs Every SaaS Founder Should Track</a>
+                            </h5>
+                            <p class="text-muted small mb-0 flex-grow-1">
+                                From MRR to Churn, we break down the metrics that actually matter for valuation.
+                            </p>
+                            <a href="#" class="btn-link text-success text-decoration-none mt-3 fw-bold small">Read
+                                Article <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <span class="badge-category">Tips</span>
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop"
+                                alt="Post 3">
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta">Oct 10, 2024 · 4 min read</div>
+                            <h5 class="card-title fw-bold mb-3">
+                                <a href="#">Stop Using Excel for Your Bookkeeping</a>
+                            </h5>
+                            <p class="text-muted small mb-0 flex-grow-1">
+                                Manual spreadsheets are a recipe for error. Here is why you need to migrate to Xero or
+                                QuickBooks.
+                            </p>
+                            <a href="#" class="btn-link text-success text-decoration-none mt-3 fw-bold small">Read
+                                Article <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <span class="badge-category">Payroll</span>
+                            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2069&auto=format&fit=crop"
+                                alt="Post 4">
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta">Sep 28, 2024 · 4 min read</div>
+                            <h5 class="card-title fw-bold mb-3">
+                                <a href="#">Contractors vs. Employees: The Legal Guide</a>
+                            </h5>
+                            <p class="text-muted small mb-0 flex-grow-1">
+                                Misclassifying your workers can lead to hefty IRS fines. Learn the rules before you
+                                hire.
+                            </p>
+                            <a href="#" class="btn-link text-success text-decoration-none mt-3 fw-bold small">Read
+                                Article <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <span class="badge-category">Mindset</span>
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop"
+                                alt="Post 5">
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta">Sep 15, 2024 · 5 min read</div>
+                            <h5 class="card-title fw-bold mb-3">
+                                <a href="#">The Financial Anxiety of Entrepreneurship</a>
+                            </h5>
+                            <p class="text-muted small mb-0 flex-grow-1">
+                                How to separate your self-worth from your net worth and run your business with a clear
+                                head.
+                            </p>
+                            <a href="#" class="btn-link text-success text-decoration-none mt-3 fw-bold small">Read
+                                Article <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <span class="badge-category">Tools</span>
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop"
+                                alt="Post 6">
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta">Sep 01, 2024 · 2 min read</div>
+                            <h5 class="card-title fw-bold mb-3">
+                                <a href="#">Top 3 Receipt Scanning Apps for 2024</a>
+                            </h5>
+                            <p class="text-muted small mb-0 flex-grow-1">
+                                Stop stuffing receipts in a shoebox. Digitizing your expenses is easier than ever.
+                            </p>
+                            <a href="#" class="btn-link text-success text-decoration-none mt-3 fw-bold small">Read
+                                Article <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="container mb-5 t">
+        <section class="newsletter-wrapper text-center" data-aos="zoom-in" data-aos-duration="800">
+
+            <div class="position-absolute top-0 end-0 p-5 opacity-25 d-none d-md-block">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="2" stroke-dasharray="10 10"
+                        opacity="0.3" />
+                </svg>
+            </div>
+
+            <div class="position-relative z-1">
+
+                <div class="avatar-stack">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+                </div>
+
+                <h2 class="fw-bold mb-3 display-6 text-success">Get smarter about your money.</h2>
+                <p class=" mb-5 mx-auto fs-5" style="max-width: 550px;">
+                    Join <strong class="text-success">2,000+ business owners</strong> receiving our weekly financial
+                    tips, tax updates, and
+                    growth strategies.
+                </p>
+
+                <form class="mx-auto" style="max-width: 500px;">
+                    <div class="input-group-pill d-flex">
+                        <input type="email" class="form-control" placeholder="Enter your email address"
+                            aria-label="Enter your email">
+                        <button class="btn btn-success fw-bold text-white shadow-sm" type="button">Subscribe</button>
+                    </div>
+                    <div class="mt-3">
+                        <small class="" style="font-size: 0.75rem;">
+                            <i class="bi bi-lock-fill me-1"></i> No spam. <span class="text-success">Unsubscribe
+                                anytime.</span>
+                        </small>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5 justify-content-between">
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-brand mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="220 360 400 100" height="50"
+                            xml:space="preserve" class="logo">
+                            <path
+                                d="M269.6 431.61h-3.55c-.27-.65-.42-2.77-.49-6.51-1.72 3.05-5.3 7.06-13.88 7.06-12.58 0-19.14-9.57-19.14-22 0-13.07 7.01-22.9 20-22.9 9.76 0 16.08 5.19 17.4 13.14h-4.47c-1.7-5.6-5.65-9.25-13.05-9.25-10.58 0-15.14 8.32-15.14 18.78 0 9.55 4.47 18.32 14.79 18.32 10.42 0 13.2-6.85 13.2-15.5v-.48h-13.31v-3.96h17.64zm35.82-15.82c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.26.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.61 0-9.87 5.43-9.87 12.83m57.97-.06c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.6 0-9.87 5.43-9.87 12.83m56.93-30.33v37.09c0 3 0 5.9.06 9h-4.03c-.14-.79-.22-3.51-.23-4.92-1.57 3.59-4.94 5.67-10.28 5.67-8.16 0-13.1-6.63-13.1-16.16 0-9.71 5.37-16.87 14.01-16.87 5.97 0 8.48 2.5 9.38 4.41v-18.22zm-23.19 30.54c0 8.17 4.09 12.59 9.29 12.59 7.89 0 9.86-5.6 9.86-13.42 0-7.62-1.73-12.18-9.36-12.18-5.92 0-9.79 4.72-9.79 13.01m34.04-28.18h15.94c8.77 0 13.18 4.63 13.18 10.83 0 5.14-3.03 8.48-6.54 9.55 3.09.92 8.04 3.99 8.04 10.66 0 8.52-6.44 12.71-14.36 12.71h-16.26zm14.82 18.53c7.01 0 9.7-2.67 9.7-7.37 0-4.11-2.9-7.28-8.57-7.28h-11.56v14.65zm-10.44 21.33h11.63c5.63 0 10-2.74 10-8.73 0-5.19-3.33-8.72-11.49-8.72h-10.13v17.45zm60.69-11.95c0 8.91-5.01 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.55 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.9-5.23 9.9-12.82 0-7.28-3.53-12.84-10.03-12.84-6.6 0-9.86 5.43-9.86 12.83m57.98-.06c0 8.91-5.02 16.58-14.52 16.58-8.75 0-14.12-7-14.12-16.5 0-9.15 5.15-16.54 14.46-16.54 8.54 0 14.18 6.56 14.18 16.46m-24.27.06c0 7.23 3.77 12.83 9.99 12.83 6.33 0 9.91-5.23 9.91-12.82 0-7.28-3.53-12.84-10.03-12.84-6.61 0-9.87 5.43-9.87 12.83m52.78 10.78c-1.56 3.46-4.5 5.74-10.41 5.74-7.21 0-13.04-5.85-13.04-16.15 0-10.77 6.37-16.88 13.84-16.88 6.17 0 8.86 2.94 9.61 5.15-.04-1.28.08-2.92.16-4.4h4c-.05 3.52-.06 5.85-.06 8.74v35.3h-4.1zm-19.05-10.62c0 6.64 3.05 12.64 9.55 12.64 7.36 0 9.63-4.98 9.63-12.96 0-7.91-1.97-12.58-9.4-12.58-6.36 0-9.78 5.39-9.78 12.9"
+                                style="fill:#231f20" />
+                            <path
+                                d="M526.91 419.84c1.36 5.14 5.54 7.68 11.57 7.68 5.97 0 9.59-2.42 9.59-6.83 0-3.66-1.6-6.21-11.01-8.14-11.33-2.3-14.82-5.97-14.82-12.24 0-5.63 4.48-11.55 15.07-11.55 11.26 0 15.45 5.89 16.06 11.14h-6.04c-.82-3.52-3.57-6.34-10.41-6.34-6.72 0-8.6 3.22-8.6 6.17 0 3.64 2.31 5.48 10.69 7.11 12.79 2.5 15.36 7.53 15.36 13.08 0 7.25-5.79 12.43-16.39 12.43-9.55 0-15.8-4.6-17.21-12.53h6.14zm9.06 18.3v-54.09h4.14v54.09z"
+                                style="fill:#8dc63f" />
+                        </svg>
+                    </div>
+                    <p class="footer-text">
+                        Business owners should focus on growing their passion, not wrestling with spreadsheets. We
+                        ensure your flight path is clear.
+                    </p>
+
+                    <div class="social-group mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Bookkeeping</a></li>
+                        <li><a href="#">Payroll</a></li>
+                        <li><a href="#">Tax Prep</a></li>
+                        <li><a href="#">CFO Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="footer-heading">Get in Touch</h6>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:hello@goodbooqs.com">hello@goodbooqs.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone"></i>
+                            <a href="tel:5551234567">(555) 123-4567</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            <span>New York, NY</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="#" class="btn-underline">Schedule a Call <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="copyright">© 2024 GoodBooqs LLC.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="legal-links">
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

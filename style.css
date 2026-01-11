@@ -1,0 +1,1208 @@
+        /* --- 1. CONFIGURATION --- */
+        :root {
+            --bs-success: #8DC63F;
+            --bs-success-rgb: 141, 198, 63;
+
+            /* --- COLOR: #F1F0E8 --- */
+            --bs-light: #F1F0E8;
+            --bs-light-rgb: 241, 240, 232;
+            --bs-body-bg: #F1F0E8;
+        }
+
+        /* --- 2. CUSTOM BUTTONS --- */
+        .btn-success {
+            --bs-btn-bg: #8DC63F;
+            --bs-btn-border-color: #8DC63F;
+            --bs-btn-hover-bg: #7ab332;
+            --bs-btn-hover-border-color: #7ab332;
+            --bs-btn-color: #fff;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+        }
+
+        /* --- THE SLIDING "GET IN TOUCH" BUTTON --- */
+        .btn-custom-dark {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #231f20;
+            border: 2px solid #231f20;
+            border-radius: 50px;
+            background: transparent;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+
+        .btn-custom-dark::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #231f20;
+            z-index: -1;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .btn-custom-dark:hover {
+            color: #fff !important;
+        }
+
+        .btn-custom-dark:hover::before {
+            width: 100%;
+        }
+
+        .btn-custom-dark .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-custom-dark:hover .arrow-icon {
+            transform: translateX(4px);
+        }
+
+        /* --- 3. UTILITIES --- */
+        .bg-light {
+            background-color: var(--bs-light) !important;
+        }
+
+        .text-success {
+            color: var(--bs-success) !important;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
+        }
+
+        /* Navbar Styling */
+        .navbar-nav-centered .nav-link {
+            position: relative;
+        }
+
+        .navbar-nav-centered .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--bs-success);
+            transition: width 0.3s;
+        }
+
+        .navbar-nav-centered .nav-link:hover::after,
+        .navbar-nav-centered .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Header Layout */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .header-content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        /* --- 4. TESTIMONIALS CSS --- */
+        .testimonial-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            /* Soft shadow */
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .quote-icon {
+            color: var(--bs-success);
+            /* Green quote marks */
+            opacity: 0.3;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .star-rating {
+            color: #FFC107;
+            /* Standard Star Yellow */
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--bs-light);
+        }
+
+        /* --- 4. TESTIMONIALS CSS --- */
+        .testimonial-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+
+            /* --- UPDATED SHADOW --- */
+            /* I increased the last number from 0.03 to 0.1 for a stronger shadow */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+
+            /* --- UPDATED HOVER SHADOW --- */
+            /* Made the hover shadow darker too, for contrast */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* pricing sectiok */
+/* --- PRICING SECTION (BRAND MATCHED) --- */
+
+/* Container & Layout */
+.pricing-section {
+    padding: 80px 20px;
+    background-color: var(--bs-light); /* Uses your Cream #F1F0E8 */
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #231f20; /* Your Dark Brand Color */
+}
+
+.pricing-header .subtitle {
+    color: #666; /* Softer grey for subtitle */
+    font-size: 1.1rem;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch; /* Ensures cards are same height */
+}
+
+/* Card Styling */
+.pricing-card {
+    background: #ffffff; /* White card to pop against Cream bg */
+    border-radius: 16px; /* Matches your Testimonial Radius */
+    padding: 40px 30px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    /* Using your updated Testimonial Shadow settings */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid transparent; /* Invisible border by default */
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Featured Card Styling (The Middle One) */
+.pricing-card.featured {
+    border: 2px solid var(--bs-success); /* YOUR GREEN #8DC63F */
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bs-success); /* YOUR GREEN */
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Typography inside Card */
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #231f20; /* Dark Text */
+}
+
+.card-header .desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 10px 0 20px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #231f20; /* Dark Text */
+}
+
+.price span {
+    font-size: 1rem;
+    color: #888;
+    font-weight: normal;
+}
+
+/* List Styling */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 0.95rem;
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom Checkmark matching your Green */
+.features-list li::before {
+    content: '✓';
+    color: var(--bs-success); /* YOUR GREEN */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.features-list li.disabled {
+    color: #ccc;
+    text-decoration: line-through;
+}
+.features-list li.disabled::before {
+    content: '×'; /* Change check to X */
+    color: #ccc;
+}
+
+/* --- BUTTONS (Matched to your Custom Buttons) --- */
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Featured Button (Filled Green) */
+/* Matches your .btn-success styles */
+.btn-primary {
+    background-color: var(--bs-success);
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #7ab332; /* Your hover green */
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* The Standard Button (Dark Outline) */
+/* Matches your .btn-custom-dark styles */
+.btn-outline {
+    background: transparent;
+    color: #231f20;
+    border: 2px solid #231f20;
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 8px; /* Matching radius */
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #231f20;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing-card.featured {
+        transform: scale(1); /* Remove scale on mobile */
+    }
+}
+
+/* --- FOOTER SECTION --- */
+
+.footer-section {
+    background-color: #231f20; /* Your Dark Brand Color */
+    color: #ffffff;
+    padding: 80px 0 30px;
+    font-family: 'Helvetica Neue', sans-serif;
+    position: relative;
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+/* --- Top Call to Action --- */
+.footer-cta {
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-cta .btn-primary {
+    /* Overriding the button width for the footer */
+    display: inline-block;
+    width: auto; 
+    min-width: 200px;
+}
+
+/* --- Main Grid Layout --- */
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr; /* Logo col is wider */
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* --- Column Styling --- */
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--bs-success); /* Green Logo */
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 300px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* --- Links Styling --- */
+.footer-links, .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .contact-list li {
+    margin-bottom: 12px;
+    color: #a0a0a0;
+}
+
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect: Turns Green */
+.footer-links a:hover {
+    color: var(--bs-success);
+    padding-left: 5px; /* Subtle movement */
+}
+
+/* --- Social Icons (Text based placeholders) --- */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #ffffff;
+    background: rgba(255,255,255,0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--bs-success);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- Footer Bottom (Copyright) --- */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: var(--bs-success);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        text-align: center;
+    }
+    
+    .footer-desc {
+        margin: 0 auto 25px auto; /* Center the text */
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .legal-links a {
+        margin: 0 10px;
+    }
+}
+
+
+
+/* --- ELEGANT CONTACT SECTION --- */
+
+/* Variables (Ensuring continuity if not already declared) */
+:root {
+    --bs-success: #8DC63F; /* Your Green */
+    --bs-dark: #231f20;    /* Your Dark Text */
+    --bs-light-bg: #F1F0E8; /* Your Cream BG */
+    --card-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* Soft, modern shadow */
+}
+
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--bs-light-bg); /* Cream Background */
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* --- LEFT COLUMN: The Form Card --- */
+.contact-form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px; /* Large, modern rounded corners */
+    box-shadow: var(--card-shadow);
+}
+
+/* The large chat icon at top of form */
+.icon-wrapper-large {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(141, 198, 63, 0.1); /* 10% opacity green */
+    color: var(--bs-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 1.8rem;
+}
+
+/* Styling Bootstrap's Floating Inputs */
+.form-floating > .form-control {
+    border: 2px solid #e9ecef; /* Light grey default border */
+    border-radius: 12px;
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}
+
+/* Input Focus State - Turns Green */
+.form-floating > .form-control:focus {
+    border-color: var(--bs-success);
+    box-shadow: 0 0 0 0.25rem rgba(141, 198, 63, 0.15); /* Subtle green glow */
+}
+
+.form-floating > label {
+    color: #999;
+}
+
+/* Submit Button styling (matches your existing green buttons) */
+.btn-primary {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+.btn-primary:hover {
+    background-color: #7ab332;
+    border-color: #7ab332;
+}
+
+
+/* --- RIGHT COLUMN: Info & Stats --- */
+
+/* The stack of 3 info cards */
+.contact-info-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Lighter shadow than form */
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Small icons inside info cards */
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(141, 198, 63, 0.1); /* Soft green bg */
+    color: var(--bs-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    flex-shrink: 0; /* Prevents icon from squishing */
+}
+
+.info-content h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--bs-dark);
+}
+
+/* Stats Row styling */
+.stat-item h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+}
+
+/* --- RESPONSIVE TWEAKS --- */
+@media (max-width: 992px) {
+    /* On tablet/mobile, remove the left padding on the right column */
+    .ps-lg-5 {
+        padding-left: 0 !important; 
+    }
+    
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    /* Center stats on mobile */
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+}
+
+/* --- FOOTER SECTION --- */
+/* --- MODERN FOOTER --- */
+.footer {
+    background-color: #ffffff;
+    /* Round the top corners for a modern "Card" look */
+    border-top-left-radius: 40px; 
+    border-top-right-radius: 40px;
+    padding: 80px 0 40px;
+    margin-top: 60px;
+    position: relative;
+    /* Soft shadow to separate from the cream body */
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.02); 
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Typography */
+.footer-brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #231f20; /* Dark Brand Color */
+    letter-spacing: -0.5px;
+}
+
+.footer-text {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    max-width: 300px;
+}
+
+/* Elegant Headers */
+.footer-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Wide spacing looks expensive */
+    font-weight: 700;
+    color: #231f20;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+/* Links Styling */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Elegant Hover Effect (Green Line Slide) */
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--bs-success); /* Your Green */
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #231f20; /* Darker on hover */
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.contact-info i {
+    color: var(--bs-success); /* Green Icons */
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--bs-success);
+}
+
+/* Social Icons (Minimalist Circles) */
+.social-group {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0; /* Very subtle border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #231f20;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* "Underline" CTA Button */
+.btn-underline {
+    color: #231f20;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--bs-success);
+    padding-bottom: 4px;
+    transition: all 0.3s;
+}
+
+.btn-underline:hover {
+    color: var(--bs-success);
+    padding-bottom: 8px; /* Moves line down slightly */
+}
+
+/* Bottom Area */
+.footer-bottom {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 30px;
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.legal-links a {
+    color: #999;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: var(--bs-success);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .contact-info li {
+        justify-content: center;
+    }
+    .social-group {
+        justify-content: center;
+    }
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .legal-links a {
+        margin: 0 10px;
+    }
+}
+
+
+        /* --- ABOUT PAGE STYLES --- */
+        
+        /* Typography Highlights */
+        .text-brand-dark { color: #231f20; }
+        .text-brand-green { color: #8DC63F; }
+        
+        /* Hero Section */
+        .about-hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        /* Image Styling */
+        .about-img-container {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img-container:hover .about-img {
+            transform: scale(1.03);
+        }
+
+        /* Value Cards */
+        .value-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--bs-success);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--bs-success);
+            margin-bottom: 20px;
+        }
+
+        /* Team Section */
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+          /* --- BLOG SPECIFIC CSS --- */
+
+        .text-brand-dark {
+            color: #231f20;
+        }
+
+        .text-brand-green {
+            color: #8DC63F;
+        }
+
+        /* Blog Card Styling */
+        .blog-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image Container for Zoom Effect */
+        .blog-img-wrap {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        /* Categories / Badges */
+        .badge-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #231f20;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #adb5bd;
+            margin-bottom: 10px;
+        }
+
+        .card-title a {
+            color: #231f20;
+            text-decoration: none;
+            background-image: linear-gradient(#231f20, #231f20);
+            background-size: 0% 1px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size 0.3s ease;
+        }
+
+        .blog-card:hover .card-title a {
+            background-size: 100% 1px;
+        }
+
+        /* Featured Post Styling */
+        .featured-card {
+            border: none;
+            background: #f8f9fa;
+            /* Light grey background */
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .featured-img {
+            height: 100%;
+            min-height: 350px;
+            object-fit: cover;
+        }
+
+        .newsletter-wrapper {
+            background-color: #231f20;
+
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+            /* Subtle texture overlay */
+
+        }
+
+        /* Modern Pill Input Group */
+        .input-group-pill {
+            background: #ffffff;
+            padding: 6px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-group-pill .form-control {
+            border: none;
+            background: transparent;
+            padding-left: 25px;
+            font-size: 1rem;
+        }
+
+        .input-group-pill .form-control:focus {
+            box-shadow: none;
+            background: transparent;
+        }
+
+        .input-group-pill .btn {
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .input-group-pill .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Avatar Stack for Social Proof */
+        .avatar-stack {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .avatar-stack img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 3px solid #231f20;
+            /* Matches background color to create 'cutout' effect */
+            object-fit: cover;
+            margin-left: -15px;
+            /* Negative margin for overlap */
+            transition: transform 0.3s ease;
+        }
+
+        .avatar-stack img:first-child {
+            margin-left: 0;
+        }
+
+        .avatar-stack img:hover {
+            transform: translateY(-5px);
+            z-index: 10;
+        }
+
+        /* newsletteer*/
+.newsletter-wrapper {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    
+    /* ADDED: Smooth Drop Shadow */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); 
+
+    /* The Gradients (Delete this block if you want it pure white) */
+
+}
+
+/* Modern Pill Input Group */
+.input-group-pill {
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 50px;
+    /* Made this shadow slightly darker to pop against the white card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    border: 1px solid #f0f0f0; /* Optional: adds subtle definition */
+}
+
+.input-group-pill .form-control {
+    border: none;
+    background: transparent;
+    padding-left: 25px;
+    font-size: 1rem;
+    color: #333; /* Ensure text is visible on white */
+}
+
+.input-group-pill .form-control:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+.input-group-pill .btn {
+    border-radius: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: transform 0.2s ease-in;
+}
+
+.input-group-pill .btn:hover {
+    transform: scale(1.05); /* Slightly toned down for smoothness */
+}
+
+/* Avatar Stack */
+.avatar-stack {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.avatar-stack img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    
+    /* CHANGED: Border must match background (White) to look like a cutout */
+    border: 3px solid #ffffff; 
+    
+    object-fit: cover;
+    margin-left: -15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Added small shadow to avatars */
+}
+
+.avatar-stack img:first-child {
+    margin-left: 0;
+}
+
+.avatar-stack img:hover {
+    transform: translateY(-5px);
+    z-index: 10;
+}
